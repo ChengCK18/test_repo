@@ -1,16 +1,20 @@
 import { useState, useEffect } from 'react'
+import chisato from './Chisato_Nishikigi.png'
+import Background from './background.jpg';
 
 const App = () => {
 
-    const [scrollPosition, setScrollPosition] = useState(1000);
+    const [scrollPosition, setScrollPosition] = useState(0);
 
 
-
+    var sectionStyle = {
+        height: "100%",
+        backgroundImage: `url(${Background})`
+      };
 
     const scrollEvent = (e) => {
-        console.log('heree2', e.target.scrollLeft)
         if (e.target.scrollLeft % 2 === 0) {
-            setScrollPosition(e.target.scrollLeft * 1.1)
+            setScrollPosition(e.target.scrollLeft +100 ) 
         }
 
 
@@ -26,13 +30,15 @@ const App = () => {
             </div>
 
             <div onScroll={scrollEvent} className="flex-1 h-screen overflow-x-scroll bg-lime-500">
-                <div className={`relative h-screen w-[5000px] bg-emerald-400`}>
+                <div style={sectionStyle} className={`relative h-screen w-[5000px] bg-emerald-400`}>
                     <div style={{
                         'postion': 'absolute',
-                        'padding-left': `${scrollPosition}px`,
-                        'transition': 'all .1s ease-in-out'
+                        'paddingLeft': `${scrollPosition}px`,
+                        'transition': 'all .25s ease-in-out',
+                        
                     }} >
-                        <button> Lagtrain </button>
+                        <img  src={chisato}/>
+                        
                     </div>
                 </div>
             </div>
