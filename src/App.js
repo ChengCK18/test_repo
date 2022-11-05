@@ -54,7 +54,7 @@ const App = () => {
                     </div>
                 </div>
                 <div id='set-height' className='' style={{'height':`${scrollLength}px`}} />
-                <video ref={zeVideo} id='v0' className='w-full fixed top-[0] left-[0]' autobuffer="autobuffer" preload="preload" onLoadedData={handleOnVideoLoaded}>
+                <video ref={zeVideo} id='v0' className='w-full fixed top-[0] left-[0]' preload="auto" onLoadedData={handleOnVideoLoaded}>
                     <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="https://www.apple.com/media/us/mac-pro/2013/16C1b6b5-1d91-4fef-891e-ff2fc1c1bb58/videos/macpro_main_desktop.mp4"></source>
                 </video>
             </div>
