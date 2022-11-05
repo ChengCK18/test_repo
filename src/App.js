@@ -1,8 +1,7 @@
-import { useState, useEffect,useLayoutEffect } from 'react'
+import { useState } from 'react'
 import { useRef } from 'react';
-import chisato from './Chisato_Nishikigi.png'
-import Background from './background.jpg';
-import da_video from './sample.mp4'
+
+// import sampleVid from './sample_vid.mp4'
 const App = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
     const [scrollLength, setScrollLength] = useState(10000)
@@ -12,9 +11,6 @@ const App = () => {
     const handleOnVideoLoaded = () =>{
         setScrollLength(Math.floor(zeVideo.current.duration) * playbackConst)
     }
-
-
-
     let vid = document.getElementById('v0');
     if(vid !== null){
       
