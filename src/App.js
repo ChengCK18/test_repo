@@ -25,11 +25,11 @@ const App = () => {
     }
 
     const da_style =
-        'bg-gray-300 opacity-80 text-2xl font-bold p-2 rounded-lg flex-initial w-32 text-center '
+        'bg-gray-300 opacity-80 text-2xl font-bold p-2 rounded-lg flex-initial w-28 text-center '
 
     return (
         <div className="">
-            <div className="fixed top-10 left-0 z-10 flex w-screen flex-row-reverse  flex-wrap  space-x-14 space-x-reverse">
+            <div className="fixed top-10 left-0 z-10 flex w-screen flex-row-reverse  flex-wrap  space-x-8 space-x-reverse">
                 <div
                     className={
                         'mr-20 flex w-48 flex-initial flex-row space-x-6 rounded-lg bg-gray-300 pl-3 pt-3 text-center text-2xl font-bold opacity-80'
@@ -62,7 +62,7 @@ const App = () => {
                 </a>
 
                 <div className="flex-grow">
-                    <div className="pl-24">
+                    <div className="pl-16">
                         <button className="font-bold text-white"> LOGO</button>
                     </div>
                 </div>
@@ -75,7 +75,7 @@ const App = () => {
             <video
                 ref={zeVideo}
                 id="v0"
-                className="fixed top-[0] left-[0] w-full"
+                className="fixed top-[0] left-[0] w-full h-full object-fill"
                 preload="auto"
                 onLoadedData={handleOnVideoLoaded}
             >
