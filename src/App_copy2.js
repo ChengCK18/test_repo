@@ -29,8 +29,7 @@ const App = () => {
 
     return (
         <div className="">
-            {/* Navbar */}
-            {/* <div className="fixed top-10 left-0 z-10 flex w-screen flex-row-reverse  flex-wrap  space-x-8 space-x-reverse">
+            <div className="fixed top-10 left-0 z-10 flex w-screen flex-row-reverse  flex-wrap  space-x-8 space-x-reverse">
                 <div
                     className={
                         'mr-20 flex w-48 flex-initial flex-row space-x-6 rounded-lg bg-gray-300 pl-3 pt-3 text-center text-2xl font-bold opacity-80'
@@ -67,39 +66,28 @@ const App = () => {
                         <button className="font-bold text-white"> LOGO</button>
                     </div>
                 </div>
-            </div> */}
-            <div className="h-[500vh]">
-                <div className="sticky top-0 h-screen w-full bg-red-100 ">
-                    <video
-                        ref={zeVideo}
-                        id="v0"
-                        className="h-full w-full object-fill"
-                        preload="auto"
-                        onLoadedData={handleOnVideoLoaded}
-                    >
-                        <source
-                            type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
-                            src="https://www.apple.com/media/us/mac-pro/2013/16C1b6b5-1d91-4fef-891e-ff2fc1c1bb58/videos/macpro_main_desktop.mp4"
-                        ></source>
-                    </video>
-                </div>
+            </div>
+            <div
+                id="set-height"
+                className=""
+                style={{ height: `${scrollLength}px` }}
+            />
+            <div className="left-[0] h-full w-full ">
+                <video
+                    ref={zeVideo}
+                    id="v0"
+                    className="object-fill"
+                    preload="auto"
+                    onLoadedData={handleOnVideoLoaded}
+                >
+                    <source
+                        type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+                        src="https://www.apple.com/media/us/mac-pro/2013/16C1b6b5-1d91-4fef-891e-ff2fc1c1bb58/videos/macpro_main_desktop.mp4"
+                    ></source>
+                </video>
             </div>
 
-            <div className="h-[300vh] bg-red-400">
-                <div className="sticky top-0 flex h-[100vh] h-screen w-full flex-wrap">
-                    <div className="flex flex-col bg-blue-100 mobile:h-2/4 mobile:w-full laptop:h-full laptop:w-3/6">
-                        <div className="h-4/5 bg-yellow-200">da-child1</div>
-                        <div className="h-1/5 bg-yellow-300">da-child1</div>
-                    </div>
-                    <div className="bg-blue-200  mobile:h-2/4 mobile:w-2/4 laptop:h-full laptop:w-1/4">
-                        text
-                    </div>
-                    <div className="bg-blue-300  mobile:h-2/4 mobile:w-2/4 laptop:h-full laptop:w-1/4">
-                        Headings
-                    </div>
-                </div>
-            </div>
-            <div className="h-[300vh] bg-purple-500"></div>
+            <div className="z-10 bg-red-200">hello</div>
         </div>
     )
 }
