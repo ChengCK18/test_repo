@@ -1,21 +1,20 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRef } from 'react'
-import { FaDiscord } from 'react-icons/fa'
-import { BsTwitter, BsSpotify } from 'react-icons/bs'
-import { AiFillInstagram } from 'react-icons/ai'
-// import sampleVid from './sample_vid.mp4'
+import Navbar from './components/Navbar'
+import sampleVid from './test_vid.mp4'
+import sampleImg from './test_pic.jpg'
 const App = () => {
-    const [scrollPosition, setScrollPosition] = useState(0)
-    const [scrollLength, setScrollLength] = useState(10000)
+    const [videoLoading, setVideoLoading] = useState(true)
+    const [counter, setCounter] = useState(0)
     const zeVideo = useRef(null)
     const playbackConst = 500
-
     const handleOnVideoLoaded = () => {
-        setScrollLength(Math.floor(zeVideo.current.duration) * playbackConst)
+        setVideoLoading(false)
     }
+
     let vid = document.getElementById('v0')
     if (vid !== null) {
-        function scrollPlay() {
+        const scrollPlay = () => {
             var frameNumber = window.pageYOffset / playbackConst
             vid.currentTime = frameNumber
             window.requestAnimationFrame(scrollPlay)
@@ -24,50 +23,10 @@ const App = () => {
         window.requestAnimationFrame(scrollPlay)
     }
 
-    const da_style =
-        'bg-gray-300 opacity-80 text-2xl font-bold p-2 rounded-lg flex-initial w-28 text-center '
-
     return (
         <div className="">
-            {/* Navbar */}
-            {/* <div className="fixed top-10 left-0 z-10 flex w-screen flex-row-reverse  flex-wrap  space-x-8 space-x-reverse">
-                <div
-                    className={
-                        'mr-20 flex w-48 flex-initial flex-row space-x-6 rounded-lg bg-gray-300 pl-3 pt-3 text-center text-2xl font-bold opacity-80'
-                    }
-                >
-                    <a href="https://discord.com/">
-                        <FaDiscord />
-                    </a>
-                    <a href="https://twitter.com/">
-                        <BsTwitter />
-                    </a>
-                    <a href="https://www.instagram.com/">
-                        <AiFillInstagram />
-                    </a>
-                    <a href="https://open.spotify.com/">
-                        <BsSpotify />
-                    </a>
-                </div>
-                <a href="#" className={da_style}>
-                    FAQ
-                </a>
-                <a href="#" className={da_style}>
-                    MINT
-                </a>
-                <a href="#" className={da_style}>
-                    ABOUT
-                </a>
-                <a href="#" className={da_style}>
-                    VISION
-                </a>
+            <Navbar />
 
-                <div className="flex-grow">
-                    <div className="pl-16">
-                        <button className="font-bold text-white"> LOGO</button>
-                    </div>
-                </div>
-            </div> */}
             <div className="h-[500vh]">
                 <div className="sticky top-0 h-screen w-full bg-red-100 ">
                     <video
@@ -79,7 +38,7 @@ const App = () => {
                     >
                         <source
                             type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
-                            src="https://www.apple.com/media/us/mac-pro/2013/16C1b6b5-1d91-4fef-891e-ff2fc1c1bb58/videos/macpro_main_desktop.mp4"
+                            src={sampleVid}
                         ></source>
                     </video>
                 </div>
@@ -88,14 +47,43 @@ const App = () => {
             <div className="h-[300vh] bg-red-400">
                 <div className="sticky top-0 flex h-[100vh] h-screen w-full flex-wrap">
                     <div className="flex flex-col bg-blue-100 mobile:h-2/4 mobile:w-full laptop:h-full laptop:w-3/6">
-                        <div className="h-4/5 bg-yellow-200">da-child1</div>
-                        <div className="h-1/5 bg-yellow-300">da-child1</div>
+                        <div className="flex h-4/5 items-center justify-center bg-yellow-200">
+                            <img className="h-2/4 w-3/4" src={sampleImg} />
+                        </div>
+                        <div className=" flex h-1/5 items-center justify-end bg-white font-extrabold mobile:pr-2 mobile:text-5xl  laptop:pr-10 laptop:text-8xl">
+                            <div className="bg-gradient-to-r from-blue-300 to-pink-300 bg-clip-text font-extrabold text-transparent">
+                                VISION
+                            </div>
+                        </div>
                     </div>
-                    <div className="bg-blue-200  mobile:h-2/4 mobile:w-2/4 laptop:h-full laptop:w-1/4">
-                        text
+                    <div className="flex items-center justify-center bg-blue-200 mobile:h-2/4 mobile:w-2/4 laptop:h-full laptop:w-1/4 ">
+                        <div
+                            onClick={() => {
+                                console.log('heyy')
+                                let newCounter = counter + 1
+                                setCounter(newCounter)
+                            }}
+                            className={`p-6 ${
+                                counter % 2 === 0 ? 'bg-red-200' : 'bg-pink-200'
+                            } transition duration-500 ease-out `}
+                        >
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.
+                        </div>
                     </div>
-                    <div className="bg-blue-300  mobile:h-2/4 mobile:w-2/4 laptop:h-full laptop:w-1/4">
-                        Headings
+                    <div className="flex flex-col items-center justify-center bg-green-200  mobile:h-2/4 mobile:w-2/4 laptop:h-full laptop:w-1/4 ">
+                        <div className="font-extrabold mobile:text-5xl laptop:text-7xl">
+                            WHY
+                        </div>
+                        <div className="font-extrabold mobile:text-5xl laptop:text-7xl">
+                            WHAT
+                        </div>
+                        <div className="font-extrabold mobile:text-5xl laptop:text-7xl">
+                            HOW
+                        </div>
                     </div>
                 </div>
             </div>
