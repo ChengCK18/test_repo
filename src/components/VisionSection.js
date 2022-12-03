@@ -52,16 +52,7 @@ const VisionSection = () => {
                     </div>
                 </div>
                 <div className="flex items-center justify-center bg-blue-200 mobile:h-2/4 mobile:w-2/4 laptop:h-full laptop:w-1/4 ">
-                    <div
-                        onClick={() => {
-                            console.log('heyy')
-                            let newCounter = counter + 1
-                            setCounter(newCounter)
-                        }}
-                        className={`p-6 ${
-                            counter % 2 === 0 ? 'bg-red-200' : 'bg-pink-200'
-                        } transition duration-500 ease-out `}
-                    >
+                    <div className="bg-red-300">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua. Ut enim ad minim veniam, quis nostrud
