@@ -49,7 +49,7 @@ const Navbar = () => {
     return (
         <div
             key={''}
-            className={` ${lastScrollAction ? 'visible' : 'invisible'}`}
+            className={` ${lastScrollAction ? 'visible' : 'visible'}`}
         >
             <div className="fixed top-8 left-0 z-10 flex w-screen flex-row-reverse  flex-wrap  space-x-8 space-x-reverse mobile:hidden laptop:flex">
                 <div
@@ -71,7 +71,8 @@ const Navbar = () => {
                     </a>
                 </div>
                 <a href="#" className={navItemStyle}>
-                    FAQ
+                    {scrollPosition}
+                    {window.innerHeight}
                 </a>
                 <a href="#" className={navItemStyle}>
                     MINT
