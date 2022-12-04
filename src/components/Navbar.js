@@ -71,8 +71,7 @@ const Navbar = () => {
                     </a>
                 </div>
                 <a href="#" className={navItemStyle}>
-                    {scrollPosition}
-                    {window.innerHeight}
+                    {scrollPosition} /{window.innerHeight}
                 </a>
                 <a href="#" className={navItemStyle}>
                     MINT
