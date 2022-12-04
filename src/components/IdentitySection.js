@@ -113,8 +113,8 @@ const IdentitySection = () => {
                             src={sampleImg}
                         />
                     </div>
-                    <div className=" flex h-1/5 items-center font-extrabold mobile:justify-center mobile:text-5xl laptop:justify-start laptop:text-8xl">
-                        <div className=" bg-gradient-to-r from-blue-300 to-pink-300 bg-clip-text font-extrabold text-transparent">
+                    <div className=" flex h-1/5 items-center  mobile:justify-center mobile:text-5xl laptop:justify-start laptop:text-8xl">
+                        <div className=" bg-gradient-to-r from-blue-300 to-pink-300 bg-clip-text font-extrabold font-extrabold text-transparent">
                             IDENTITY
                         </div>
                     </div>
