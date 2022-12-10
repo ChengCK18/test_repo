@@ -1,7 +1,7 @@
 const GallerySection = () => {
     return (
-        <div className="h-screen ">
-            <div className="flex h-3/5 flex-row flex-wrap items-end justify-center space-x-10 space-y-10 pb-5">
+        <div className="flex w-full  laptop:h-screen">
+            <div className="flex h-3/5 flex-row flex-wrap items-end justify-center space-y-10 pb-5 laptop:space-x-10 laptop:pl-2">
                 <div className="h-60 w-64 bg-blue-100 shadow-lg transition ease-in-out hover:scale-110"></div>
                 <div className="h-60 w-64 bg-blue-100 shadow-lg transition ease-in-out hover:scale-110"></div>
                 <div className="h-60 w-64 bg-blue-100 shadow-lg transition ease-in-out hover:scale-110"></div>
@@ -9,8 +9,8 @@ const GallerySection = () => {
                 <div className="h-60 w-64 bg-blue-100 shadow-lg transition ease-in-out hover:scale-110"></div>
             </div>
 
-            <div className="flex h-2/5 flex-row">
-                <div className="bg-gradient-to-r from-blue-300 to-pink-300 bg-clip-text pl-20 pt-10 text-8xl font-extrabold text-transparent">
+            <div className="sticky top-5 flex w-1/5 flex-row items-center justify-center mobile:h-60 laptop:h-full">
+                <div className="-rotate-90 bg-gradient-to-r from-blue-300 to-pink-300 bg-clip-text pb-5 pt-10 font-extrabold text-transparent  mobile:text-5xl laptop:pl-20 laptop:text-8xl">
                     GALLERY
                 </div>
             </div>
