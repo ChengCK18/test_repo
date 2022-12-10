@@ -51,7 +51,7 @@ const Navbar = () => {
             key={''}
             className={` ${lastScrollAction ? 'visible' : 'invisible'}`}
         >
-            <div className="fixed top-8 left-0 z-10 flex w-screen flex-row-reverse  flex-wrap  space-x-8 space-x-reverse mobile:hidden laptop:flex">
+            <div className="fixed top-8 left-0 z-20 flex w-screen flex-row-reverse  flex-wrap  space-x-8 space-x-reverse mobile:hidden laptop:flex">
                 <div
                     className={
                         'mr-20 flex w-48 flex-initial flex-row space-x-6 rounded-lg bg-gray-300 pl-3 pt-3 text-center text-2xl font-bold opacity-80'

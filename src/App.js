@@ -3,6 +3,7 @@ import LandingSection from './components/LandingSection'
 import VisionSection from './components/VisionSection'
 import IdentitySection from './components/IdentitySection'
 import GallerySection from './components/GallerySection'
+import CatchPhrase from './components/CatchPhrase'
 const App = () => {
     return (
         <div className="">
@@ -11,7 +12,7 @@ const App = () => {
             <VisionSection />
             <IdentitySection />
             <GallerySection />
-            <div className="h-[300vh] bg-purple-500"></div>
+            <CatchPhrase />
         </div>
     )
 }
