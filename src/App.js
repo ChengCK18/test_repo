@@ -7,12 +7,13 @@ import CatchPhrase from './components/CatchPhrase'
 const App = () => {
     return (
         <div className="">
-            <Navbar />
+            {/* <Navbar />
             <LandingSection />
             <VisionSection />
             <IdentitySection />
             <GallerySection />
-            <CatchPhrase />
+            <CatchPhrase /> */}
+            Come back later :D
         </div>
     )
 }

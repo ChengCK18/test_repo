@@ -4,7 +4,12 @@ const plugin = require('tailwindcss/plugin')
 module.exports = {
     content: ['./src/**/*.{js,jsx,ts,tsx}'],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                nunito: ['nunito', 'sans-serif'],
+                neueHaas: ['Neue Haas Grotesk Display Pro', 'sans-serif'],
+            },
+        },
 
         screens: {
             mobile: '320px',

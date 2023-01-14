@@ -71,7 +71,7 @@ const IdentitySection = () => {
                 </div>
                 <div className="relative flex items-center justify-center mobile:h-2/4 mobile:w-2/4 laptop:h-full laptop:w-1/4 ">
                     <div
-                        className={`absolute  mobile:pr-3 mobile:text-base laptop:pr-8 laptop:text-2xl  ${
+                        className={`absolute  font-mono mobile:pr-3 mobile:text-base laptop:pr-8 laptop:text-2xl ${
                             visionSegment === 0
                                 ? 'opacity-100 transition-opacity duration-500 ease-in '
                                 : ' opacity-0 transition-opacity duration-500 ease-out'
@@ -83,7 +83,7 @@ const IdentitySection = () => {
                         nostrud exercitation ullamco laboris nisi ut aliquip
                     </div>
                     <div
-                        className={`absolute  mobile:pr-3 mobile:text-base laptop:pr-8  laptop:text-2xl ${
+                        className={`absolute mobile:pr-3  mobile:text-base laptop:pr-8 laptop:text-2xl ${
                             visionSegment === 1
                                 ? 'opacity-100 transition-opacity duration-500 ease-in'
                                 : ' opacity-0 transition-opacity duration-500 ease-out'
